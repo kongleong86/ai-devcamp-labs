@@ -17,3 +17,4 @@ ai_devcamp_docs/
 .agents/
 .claude/
 deployment_metadata.json
+/.idea/

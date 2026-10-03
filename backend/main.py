@@ -7,6 +7,11 @@ import json
 import logging
 import os
 import pathlib
+import sys
+
+if sys.platform == "win32":
+    # Third-party log messages may contain emoji that cp1252 cannot encode.
+    sys.stderr.reconfigure(errors="backslashreplace")
 
 from ag_ui_adk import ADKAgent, add_adk_fastapi_endpoint
 from dotenv import load_dotenv
